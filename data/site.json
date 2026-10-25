@@ -1,5 +1,5 @@
 {
-  "_readme": "編輯說明：本檔集中管理 實績(stats)、成長故事(story)、媒體採訪(press)、獲獎榮譽(awards)、服務工具(services)、社群(social)、簡介(bio)。新增獎項照片：把大圖放進 assets/awards/（建議長邊 1600px）並另存一張 -thumb 縮圖，再到 awards.groups[] 某一組的 items[] 加一筆 {\"year\":\"115年度\",\"title\":\"獎項名稱\",\"org\":\"頒發單位\",\"photos\":[{\"src\":\"assets/awards/檔名.jpg\",\"thumb\":\"assets/awards/檔名-thumb.jpg\",\"caption\":\"圖說\"}]}。要新增一個時期就在 groups 加一組。",
+  "_readme": "編輯說明：本檔集中管理 實績(stats)、成長故事(story)、媒體採訪(press)、獲獎榮譽(awards)、服務工具(services)、社群(social)、簡介(bio)。新增獎項照片：把大圖放進 assets/awards/（建議長邊 1600px）並另存一張 -thumb 縮圖，再到 awards.groups[] 某一組的 items[] 加一筆 {\"year\":\"115年度\",\"title\":\"獎項名稱\",\"org\":\"頒發單位\",\"photos\":[{\"src\":\"assets/awards/檔名.jpg\",\"thumb\":\"assets/awards/檔名-thumb.jpg\",\"caption\":\"圖說\"}]}。要新增一個時期就在 groups 加一組。 媒體採訪(press)：date 請填實際刊登／播出日期 YYYY-MM-DD，網站會自動由新到舊排序；查不到日期留空會排在最後。",
   "contact": {
     "phone": "0975416911",
     "phoneDisplay": "0975-416-911",
@@ -36,8 +36,9 @@
       "url": "https://www.businesstoday.com.tw/article/category/192008/post/202411250019/",
       "thumb": "assets/press/businesstoday.jpg",
       "video": false,
-      "date": "2024.11",
-      "thumbSource": "og:image"
+      "date": "2024-11-25",
+      "thumbSource": "og:image",
+      "dateSource": "文章刊登時間 article:published_time 2024-11-25 17:47 (UTC+8)"
     },
     {
       "outlet": "經濟日報",
@@ -45,9 +46,10 @@
       "url": "https://web.archive.org/web/20251207010259/https://money.udn.com/money/story/5621/9071119",
       "thumb": "assets/press/udn.jpg",
       "video": false,
-      "date": "2025.10",
+      "date": "2025-10-15",
       "note": "原文已下架，連結為網頁典藏版",
-      "thumbSource": "og:image"
+      "thumbSource": "og:image",
+      "dateSource": "網頁典藏版文章時間 2025/10/15 10:38"
     },
     {
       "outlet": "三立財經",
@@ -55,8 +57,9 @@
       "url": "https://www.youtube.com/watch?v=wttpayteJLo",
       "thumb": "assets/press/set-1.jpg",
       "video": true,
-      "date": "2024.11",
-      "thumbSource": "電視畫面截圖（Key 提供）"
+      "date": "2024-11-29",
+      "thumbSource": "電視畫面截圖（Key 提供）",
+      "dateSource": "三立 iNEWS 台灣要聞 20241129（影片標題；YouTube 轉貼上傳 2024-12-03）"
     },
     {
       "outlet": "三立財經",
@@ -64,8 +67,9 @@
       "url": "https://www.youtube.com/watch?v=sqjFHsskYB0",
       "thumb": "assets/press/set-2.jpg",
       "video": true,
-      "date": "",
-      "thumbSource": "電視畫面截圖（Key 提供）"
+      "date": "2025-08-21",
+      "thumbSource": "電視畫面截圖（Key 提供）",
+      "dateSource": "三立「94要賺錢」YouTube 上傳 2025-08-21 10:40 (UTC+8)"
     },
     {
       "outlet": "東森新聞",
@@ -73,8 +77,9 @@
       "url": "https://www.youtube.com/watch?v=dhFu5XR6p_4",
       "thumb": "assets/press/ebc-1.jpg",
       "video": true,
-      "date": "",
-      "thumbSource": "電視畫面截圖（Key 提供）"
+      "date": "2024-01-16",
+      "thumbSource": "電視畫面截圖（Key 提供）",
+      "dateSource": "東森新聞原報導〈獨家／不再只有「地區型」百貨！微風將進駐基隆「東岸」〉2024-01-16 13:27（YouTube 轉貼上傳 2024-05-24）"
     },
     {
       "outlet": "東森新聞",
@@ -82,8 +87,9 @@
       "url": "https://www.youtube.com/watch?v=B1I2Vz7IRaI",
       "thumb": "assets/press/ebc-2.jpg",
       "video": true,
-      "date": "",
-      "thumbSource": "YouTube 縮圖"
+      "date": "2023-08-24",
+      "thumbSource": "YouTube 縮圖",
+      "dateSource": "東森新聞原報導 news.ebc.net.tw/news/living/379252 2023-08-24（YouTube 轉貼上傳 2024-12-03）"
     },
     {
       "outlet": "東森新聞",
@@ -91,8 +97,9 @@
       "url": "https://www.youtube.com/watch?v=f5jlSAmS2-Y",
       "thumb": "assets/press/ebc-3.jpg",
       "video": true,
-      "date": "",
-      "thumbSource": "電視畫面截圖（Key 提供）"
+      "date": "2024-07-23",
+      "thumbSource": "電視畫面截圖（Key 提供）",
+      "dateSource": "東森新聞 YouTube 上傳 2024-07-23 21:17 (UTC+8)"
     },
     {
       "outlet": "奇摩新聞",
@@ -100,8 +107,9 @@
       "url": "https://tw.news.yahoo.com/news/%E6%B8%AF%E9%83%BD%E5%A4%A7%E9%9A%BB%E9%9B%9E%E6%85%A2%E5%95%BC-%E4%B8%AD%E4%BF%A1%E6%88%BF%E5%B1%8B%E6%8B%93%E9%BB%9E%E5%9F%BA%E9%9A%86-061008274.html",
       "thumb": "assets/press/yahoo-1.jpg",
       "video": false,
-      "date": "",
-      "thumbSource": "og:image"
+      "date": "2022-11-02",
+      "thumbSource": "og:image",
+      "dateSource": "Yahoo datePublished 2022-11-02 14:10 (UTC+8)"
     },
     {
       "outlet": "奇摩新聞",
@@ -109,8 +117,9 @@
       "url": "https://tw.news.yahoo.com/%E6%96%B0%E9%9D%92%E5%AE%89%E6%BB%BF%E9%80%B1%E5%B9%B4%EF%BC%81%E5%85%A8%E5%8F%B0%E6%88%BF%E5%83%B9%E3%80%8C%E4%BB%8A%E9%9D%9E%E6%98%94%E6%AF%94%E3%80%8D-%E5%98%89%E7%BE%A9%E5%A4%AA%E4%BF%9D%E3%80%81%E5%8F%B0%E4%B8%AD%E5%A4%A7%E8%82%9A%E9%B9%B9%E9%AD%9A%E7%BF%BB%E8%BA%AB-3%E7%89%B9%E8%89%B2%E8%B2%B7%E7%9B%A4%E6%94%AF%E6%92%90%E5%82%AC%E6%BC%B2-032037908.html",
       "thumb": "assets/press/yahoo-2.jpg",
       "video": false,
-      "date": "2024.08",
-      "thumbSource": "og:image"
+      "date": "2024-08-01",
+      "thumbSource": "og:image",
+      "dateSource": "Yahoo datePublished 2024-08-01 11:20 (UTC+8)"
     }
   ],
   "awards": {

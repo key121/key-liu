@@ -4,6 +4,10 @@
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var esc = function (s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]; }); };
   var ext = 'target="_blank" rel="noopener"';
+  // 子頁（例如 /v/a/）在 <body data-base="../../"> 指定根目錄，資料與圖片共用同一份。
+  var BASE = (document.body && document.body.getAttribute('data-base')) || '';
+  var asset = function (u) { return (!u || /^(https?:)?\/\//.test(u) || u.charAt(0) === '/') ? u : BASE + u; };
+  var fmtDate = function (s) { return String(s || '').replace(/-/g, '.'); };
 
   var ICON = {
     home: '<path d="M3 10.5 12 3l9 7.5V21h-6v-6H9v6H3z"/>',
@@ -32,14 +36,16 @@
     }).join('');
     // press
     var pr = $('[data-render="press"]');
-    if (pr) pr.innerHTML = d.press.map(function (p) {
+    // 由新到舊排序（date: YYYY-MM-DD；沒有日期的排最後）
+    var press = (d.press || []).slice().sort(function (a, b) { return (b.date || '0').localeCompare(a.date || '0'); });
+    if (pr) pr.innerHTML = press.map(function (p, i) {
       var media = p.thumb
-        ? '<img src="' + esc(p.thumb) + '" alt="" loading="lazy" width="800" height="450" onerror="this.parentNode.classList.add(\'noimg\');this.remove()">'
+        ? '<img src="' + esc(asset(p.thumb)) + '" alt="" loading="lazy" width="800" height="450" onerror="this.parentNode.classList.add(\'noimg\');this.remove()">'
         : '';
-      return '<a class="press-card reveal" href="' + esc(p.url) + '" ' + ext + '>' +
+      return '<a class="press-card reveal' + (i === 0 ? ' is-latest' : '') + '" href="' + esc(p.url) + '" ' + ext + '>' +
         '<div class="press-media' + (p.thumb ? '' : ' noimg') + '"><span class="press-fallback">' + esc(p.outlet) + '</span>' + media +
         (p.video ? '<span class="play" aria-label="影片">' + svg('play') + '</span>' : '') + '</div>' +
-        '<div class="press-body"><div class="press-meta"><span class="outlet">' + esc(p.outlet) + '</span>' + (p.video ? '<span class="tag">影音</span>' : '<span class="tag">報導</span>') + (p.date ? '<span class="date">' + esc(p.date) + '</span>' : '') + '</div>' +
+        '<div class="press-body"><div class="press-meta"><span class="outlet">' + esc(p.outlet) + '</span>' + (p.video ? '<span class="tag">影音</span>' : '<span class="tag">報導</span>') + (p.date ? '<time class="date" datetime="' + esc(p.date) + '">' + esc(fmtDate(p.date)) + '</time>' : '') + '</div>' +
         '<h3>' + esc(p.title) + '</h3>' + (p.note ? '<p class="press-note">' + esc(p.note) + '</p>' : '') +
         '<span class="more">' + (p.video ? '觀看影片' : '閱讀報導') + svg('arrow') + '</span></div></a>';
     }).join('');
@@ -50,7 +56,7 @@
         (g.items || []).map(function (it) {
           var photos = (it.photos || []).map(function (ph) {
             var i = gallery.push(ph) - 1;
-            return '<button class="tl-photo" data-lb="' + i + '" aria-label="放大：' + esc(ph.caption) + '"><img src="' + esc(ph.thumb || ph.src) + '" alt="' + esc(ph.caption) + '" loading="lazy"></button>';
+            return '<button class="tl-photo" data-lb="' + i + '" aria-label="放大：' + esc(ph.caption) + '"><img src="' + esc(asset(ph.thumb || ph.src)) + '" alt="' + esc(ph.caption) + '" loading="lazy"></button>';
           }).join('');
           return '<li class="tl-item reveal"><span class="tl-dot" aria-hidden="true"></span>' +
             (it.year ? '<div class="tl-year">' + esc(it.year) + '</div>' : '') +
@@ -67,10 +73,10 @@
     var ab = $('[data-render="about"]'), b = d.bio;
     if (ab && b) ab.innerHTML =
       '<div class="about-text reveal"><div class="sec-head left"><span class="kicker">ABOUT</span><h2>關於展麟</h2><span class="gold-rule"></span></div>' +
-      '<div class="about-lead"><figure class="fam"><img src="' + esc(b.family.src) + '" alt="' + esc(b.family.alt) + '" loading="lazy"></figure><p class="lead">' + esc(b.lead) + '</p></div>' +
+      '<div class="about-lead"><figure class="fam"><img src="' + esc(asset(b.family.src)) + '" alt="' + esc(b.family.alt) + '" loading="lazy"></figure><p class="lead">' + esc(b.lead) + '</p></div>' +
       b.paras.map(function (p) { return '<p>' + esc(p) + '</p>'; }).join('') +
       '<ul class="promises">' + b.promises.map(function (p) { return '<li>' + esc(p) + '</li>'; }).join('') + '</ul></div>' +
-      '<figure class="about-photo reveal"><img src="' + esc(b.lifestyle.src) + '" alt="' + esc(b.lifestyle.alt) + '" loading="lazy"><figcaption>' + esc(b.lifestyle.caption) + '</figcaption></figure>';
+      '<figure class="about-photo reveal"><img src="' + esc(asset(b.lifestyle.src)) + '" alt="' + esc(b.lifestyle.alt) + '" loading="lazy"><figcaption>' + esc(b.lifestyle.caption) + '</figcaption></figure>';
     // social
     var so2 = $('[data-render="social"]');
     if (so2) so2.innerHTML = d.social.map(function (s) {
@@ -86,7 +92,7 @@
   function setupLightbox(items) {
     var lb = $('#lightbox'); if (!lb) return;
     var img = $('img', lb), cap = $('figcaption', lb), cur = 0, last = null;
-    function show(i) { cur = (i + items.length) % items.length; img.src = items[cur].src; img.alt = items[cur].caption || ''; cap.textContent = items[cur].caption || ''; }
+    function show(i) { cur = (i + items.length) % items.length; img.src = asset(items[cur].src); img.alt = items[cur].caption || ''; cap.textContent = items[cur].caption || ''; }
     function open(i) { last = document.activeElement; show(i); lb.hidden = false; document.body.classList.add('lb-open'); $('.lb-close', lb).focus(); }
     function close() { lb.hidden = true; document.body.classList.remove('lb-open'); if (last) last.focus(); }
     document.addEventListener('click', function (e) { var t = e.target.closest('[data-lb]'); if (t) open(+t.getAttribute('data-lb')); });
@@ -107,7 +113,7 @@
   // header shadow on scroll
   window.addEventListener('scroll', function () { document.body.classList.toggle('scrolled', window.scrollY > 10); }, { passive: true });
 
-  fetch('data/site.json', { cache: 'no-cache' }).then(function (r) { return r.json(); }).then(render).catch(function (e) {
+  fetch(BASE + 'data/site.json', { cache: 'no-cache' }).then(function (r) { return r.json(); }).then(render).catch(function (e) {
     console.error('site.json 載入失敗', e); setupReveal();
   });
 })();
