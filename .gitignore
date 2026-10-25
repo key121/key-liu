@@ -1,0 +1,5 @@
+assets/raw/
+screenshots/
+*.psd
+.DS_Store
+__pycache__/

@@ -1,0 +1,362 @@
+{
+  "_readme": "編輯說明：本檔集中管理 實績(stats)、成長故事(story)、媒體採訪(press)、獲獎榮譽(awards)、服務工具(services)、社群(social)、簡介(bio)。新增獎項照片：把大圖放進 assets/awards/（建議長邊 1600px）並另存一張 -thumb 縮圖，再到 awards.groups[] 某一組的 items[] 加一筆 {\"year\":\"115年度\",\"title\":\"獎項名稱\",\"org\":\"頒發單位\",\"photos\":[{\"src\":\"assets/awards/檔名.jpg\",\"thumb\":\"assets/awards/檔名-thumb.jpg\",\"caption\":\"圖說\"}]}。要新增一個時期就在 groups 加一組。",
+  "contact": {
+    "phone": "0975416911",
+    "phoneDisplay": "0975-416-911",
+    "lineId": "@key1",
+    "lineUrl": "https://line.me/R/ti/p/@key1"
+  },
+  "stats": [
+    {
+      "big": "2022–2026",
+      "label": "區域品牌第一名",
+      "note": "中信房屋總部頒發",
+      "feature": true
+    },
+    {
+      "big": "約7500萬",
+      "label": "2022–2026 累積個人績效",
+      "note": ""
+    },
+    {
+      "big": "13年多",
+      "label": "房地產第一線實戰",
+      "note": "22歲入行"
+    },
+    {
+      "big": "25歲",
+      "label": "升任台北直營店長",
+      "note": ""
+    }
+  ],
+  "press": [
+    {
+      "outlet": "今周刊",
+      "title": "大台北生活圈房價還有1字頭！「首購天堂」3大優勢吸引客群，1000萬能買10年新古屋",
+      "url": "https://www.businesstoday.com.tw/article/category/192008/post/202411250019/",
+      "thumb": "assets/press/businesstoday.jpg",
+      "video": false,
+      "date": "2024.11",
+      "thumbSource": "og:image"
+    },
+    {
+      "outlet": "經濟日報",
+      "title": "別人下修我上漲！北部這區近一年大漲21%",
+      "url": "https://web.archive.org/web/20251207010259/https://money.udn.com/money/story/5621/9071119",
+      "thumb": "assets/press/udn.jpg",
+      "video": false,
+      "date": "2025.10",
+      "note": "原文已下架，連結為網頁典藏版",
+      "thumbSource": "og:image"
+    },
+    {
+      "outlet": "三立財經",
+      "title": "全台唯一【首購天堂】基隆",
+      "url": "https://www.youtube.com/watch?v=wttpayteJLo",
+      "thumb": "assets/press/set-1.jpg",
+      "video": true,
+      "date": "2024.11",
+      "thumbSource": "電視畫面截圖（Key 提供）"
+    },
+    {
+      "outlet": "三立財經",
+      "title": "「基隆推案王」加碼！2.68億購安樂區廢工廠土地",
+      "url": "https://www.youtube.com/watch?v=sqjFHsskYB0",
+      "thumb": "assets/press/set-2.jpg",
+      "video": true,
+      "date": "",
+      "thumbSource": "電視畫面截圖（Key 提供）"
+    },
+    {
+      "outlet": "東森新聞",
+      "title": "基隆東岸！微風搶進駐東岸",
+      "url": "https://www.youtube.com/watch?v=dhFu5XR6p_4",
+      "thumb": "assets/press/ebc-1.jpg",
+      "video": true,
+      "date": "",
+      "thumbSource": "電視畫面截圖（Key 提供）"
+    },
+    {
+      "outlet": "東森新聞",
+      "title": "另類房仲廣告看嘸！到底是要賣房還是賣床？",
+      "url": "https://www.youtube.com/watch?v=B1I2Vz7IRaI",
+      "thumb": "assets/press/ebc-2.jpg",
+      "video": true,
+      "date": "",
+      "thumbSource": "YouTube 縮圖"
+    },
+    {
+      "outlet": "東森新聞",
+      "title": "超俗！基隆230坪廢墟賣249萬 專家：隨時會被拆",
+      "url": "https://www.youtube.com/watch?v=f5jlSAmS2-Y",
+      "thumb": "assets/press/ebc-3.jpg",
+      "video": true,
+      "date": "",
+      "thumbSource": "電視畫面截圖（Key 提供）"
+    },
+    {
+      "outlet": "奇摩新聞",
+      "title": "北漂基隆的台北房仲",
+      "url": "https://tw.news.yahoo.com/news/%E6%B8%AF%E9%83%BD%E5%A4%A7%E9%9A%BB%E9%9B%9E%E6%85%A2%E5%95%BC-%E4%B8%AD%E4%BF%A1%E6%88%BF%E5%B1%8B%E6%8B%93%E9%BB%9E%E5%9F%BA%E9%9A%86-061008274.html",
+      "thumb": "assets/press/yahoo-1.jpg",
+      "video": false,
+      "date": "",
+      "thumbSource": "og:image"
+    },
+    {
+      "outlet": "奇摩新聞",
+      "title": "全國新青安一週年",
+      "url": "https://tw.news.yahoo.com/%E6%96%B0%E9%9D%92%E5%AE%89%E6%BB%BF%E9%80%B1%E5%B9%B4%EF%BC%81%E5%85%A8%E5%8F%B0%E6%88%BF%E5%83%B9%E3%80%8C%E4%BB%8A%E9%9D%9E%E6%98%94%E6%AF%94%E3%80%8D-%E5%98%89%E7%BE%A9%E5%A4%AA%E4%BF%9D%E3%80%81%E5%8F%B0%E4%B8%AD%E5%A4%A7%E8%82%9A%E9%B9%B9%E9%AD%9A%E7%BF%BB%E8%BA%AB-3%E7%89%B9%E8%89%B2%E8%B2%B7%E7%9B%A4%E6%94%AF%E6%92%90%E5%82%AC%E6%BC%B2-032037908.html",
+      "thumb": "assets/press/yahoo-2.jpg",
+      "video": false,
+      "date": "2024.08",
+      "thumbSource": "og:image"
+    }
+  ],
+  "awards": {
+    "groups": [
+      {
+        "era": "中信房屋 冠軍商仲・基隆",
+        "sub": "中信房屋總部頒發",
+        "items": [
+          {
+            "year": "114年度",
+            "title": "基宜花東、離島地區 第一名（店家獎項）",
+            "org": "中信房屋總部頒發｜基隆微笑台北加盟店",
+            "detail": "獎座：中華民國115年3月",
+            "photos": [
+              {
+                "src": "assets/awards/114-trophy.jpg",
+                "thumb": "assets/awards/114-trophy-thumb.jpg",
+                "caption": "114年度 第一名水晶獎座"
+              }
+            ]
+          },
+          {
+            "year": "113年度",
+            "title": "基宜花東、離島地區 年度MVP・經紀人員業績績效第一名・第四季第一名・千萬經紀人",
+            "org": "中信房屋總部頒發",
+            "detail": "同年店家獎項：業績績效第一名、人均績效第一名、媒體人氣王（基隆微笑台北加盟店）",
+            "photos": [
+              {
+                "src": "assets/awards/113-stage.jpg",
+                "thumb": "assets/awards/113-stage-thumb.jpg",
+                "caption": "中信房屋40週年頒獎典禮，展麟與113年度各項獎帶"
+              },
+              {
+                "src": "assets/awards/113-sash.jpg",
+                "thumb": "assets/awards/113-sash-thumb.jpg",
+                "caption": "113年度 經紀人員業績績效 第一名"
+              },
+              {
+                "src": "assets/awards/113-mvp.jpg",
+                "thumb": "assets/awards/113-mvp-thumb.jpg",
+                "caption": "40週年典禮，配戴年度MVP獎帶"
+              }
+            ]
+          },
+          {
+            "year": "112年度",
+            "title": "基宜花東、離島地區 經紀人員業績績效第一名・千萬經紀人",
+            "org": "中信房屋總部頒發",
+            "detail": "獎座：中華民國113年4月",
+            "photos": [
+              {
+                "src": "assets/awards/112-trophy-sash.jpg",
+                "thumb": "assets/awards/112-trophy-sash-thumb.jpg",
+                "caption": "112年度 第一名獎座與千萬經紀人獎帶"
+              },
+              {
+                "src": "assets/awards/112-trophy.jpg",
+                "thumb": "assets/awards/112-trophy-thumb.jpg",
+                "caption": "112年度 經紀人員業績績效 第一名獎座"
+              }
+            ]
+          },
+          {
+            "year": "",
+            "title": "千萬經紀人獎 頒獎舞台",
+            "org": "中信房屋",
+            "detail": "",
+            "photos": [
+              {
+                "src": "assets/awards/tenmillion-stage.jpg",
+                "thumb": "assets/awards/tenmillion-stage-thumb.jpg",
+                "caption": "千萬經紀人獎頒獎典禮（右一為展麟）"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "era": "台北直營歷練",
+        "sub": "22–32歲・台北",
+        "items": [
+          {
+            "year": "",
+            "title": "卓越店主管 業績組",
+            "org": "台北直營時期・松山區",
+            "detail": "",
+            "photos": [
+              {
+                "src": "assets/awards/tp-store-manager.jpg",
+                "thumb": "assets/awards/tp-store-manager-thumb.jpg",
+                "caption": "卓越店主管 業績組 表揚"
+              }
+            ]
+          },
+          {
+            "year": "25歲",
+            "title": "升任店長第一年",
+            "org": "台北直營時期",
+            "detail": "",
+            "photos": [
+              {
+                "src": "assets/awards/tp-25yo-collage.jpg",
+                "thumb": "assets/awards/tp-25yo-collage-thumb.jpg",
+                "caption": "25歲升任店長的第一年，年度大會留影"
+              }
+            ]
+          },
+          {
+            "year": "2016",
+            "title": "年度大賽 業務英雄榜",
+            "org": "台北直營時期",
+            "detail": "",
+            "photos": [
+              {
+                "src": "assets/awards/tp-2016-hero.jpg",
+                "thumb": "assets/awards/tp-2016-hero-thumb.jpg",
+                "caption": "2016 年度大賽 業務英雄榜"
+              },
+              {
+                "src": "assets/awards/tp-cutouts.jpg",
+                "thumb": "assets/awards/tp-cutouts-thumb.jpg",
+                "caption": "與當年英雄榜立牌合影"
+              }
+            ]
+          },
+          {
+            "year": "",
+            "title": "年度頒獎典禮",
+            "org": "台北直營時期",
+            "detail": "",
+            "photos": [
+              {
+                "src": "assets/awards/tp-ceremony.jpg",
+                "thumb": "assets/awards/tp-ceremony-thumb.jpg",
+                "caption": "年度頒獎典禮，台下滿場同仁"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "services": [
+    {
+      "icon": "home",
+      "title": "591 在架物件",
+      "desc": "展麟目前委託中的物件，文案用心、資訊透明。",
+      "cta": "逛 591 店鋪",
+      "url": "https://www.591.com.tw/broker35638?type=2"
+    },
+    {
+      "icon": "map",
+      "title": "學區地圖",
+      "desc": "全臺國中小學區一圖看懂，買房前先查學區。",
+      "cta": "打開學區地圖",
+      "url": "https://key121.github.io/taiwan-school-map/"
+    },
+    {
+      "icon": "calc",
+      "title": "貸款試算",
+      "desc": "月付、利率、寬限期，幾秒算出購屋預算。",
+      "cta": "開始試算",
+      "url": "https://pro1000.cc/duo"
+    },
+    {
+      "icon": "line",
+      "title": "官方LINE @key1",
+      "desc": "留下您的需求，展麟會盡速親自回覆。",
+      "cta": "加入 LINE",
+      "url": "https://line.me/R/ti/p/@key1"
+    }
+  ],
+  "social": [
+    {
+      "icon": "fb",
+      "title": "賣房達人劉展麟",
+      "sub": "個人粉專",
+      "url": "https://www.facebook.com/key591"
+    },
+    {
+      "icon": "fb",
+      "title": "中信房屋冠軍商仲",
+      "sub": "公司粉專",
+      "url": "https://www.facebook.com/people/%E4%B8%AD%E4%BF%A1%E6%88%BF%E5%B1%8B-%E5%86%A0%E8%BB%8D%E5%95%86%E4%BB%B2%E6%88%BF%E5%9C%B0%E7%94%A2%E5%B0%88%E5%AE%B6/100083569412589/"
+    },
+    {
+      "icon": "tiktok",
+      "title": "劉店查看",
+      "sub": "抖音 TikTok",
+      "url": "https://www.tiktok.com/@pro1000.cc"
+    },
+    {
+      "icon": "web",
+      "title": "中信房屋 基隆微笑台北",
+      "sub": "官方網站",
+      "url": "https://www.ibigfun.com/pages/index/0975416911"
+    }
+  ],
+  "review": {
+    "title": "五星好評",
+    "sub": "看看客戶怎麼說，也歡迎留下您的評價",
+    "url": "https://www.google.com/maps?q=201%E5%9F%BA%E9%9A%86%E5%B8%82%E4%BF%A1%E7%BE%A9%E5%8D%80%E5%AD%9D%E6%9D%B1%E8%B7%AF112-1%E8%99%9F%E3%80%90%E5%8A%89%E5%B1%95%E9%BA%9F%E3%80%91%E5%BE%AE%E7%AC%91%E5%8F%B0%E5%8C%97%E7%A4%BE%E5%8D%80%E9%81%94%E4%BA%BA6%E6%A8%93&ftid=0x345d4f43c9a0a6dd:0x41c3cf16f4903331&hl=zh-Hant-TW&gl=tw"
+  },
+  "story": [
+    {
+      "age": "22歲",
+      "title": "北漂入行",
+      "desc": "離鄉到台北，從第一線業務做起。"
+    },
+    {
+      "age": "25歲",
+      "title": "升任台北直營店長",
+      "desc": "台北歷練約10年，專注市場分析、產品定位與價格協商。"
+    },
+    {
+      "age": "32歲",
+      "title": "回基隆創業",
+      "desc": "回到家鄉扎根，成立自己的房仲事業。"
+    },
+    {
+      "age": "2022–2026",
+      "title": "深耕基隆",
+      "desc": "累積個人績效約7500萬元，持續深耕社區經營與專任委託。"
+    }
+  ],
+  "bio": {
+    "lead": "三個女兒的爸｜劉展麟，79年次。",
+    "paras": [
+      "22歲入行，擁有13年多房地產第一線實戰經驗，25歲升任台北直營房仲店長，長期專注市場分析、產品定位與價格協商。",
+      "自2022年至2026年，累積個人績效約7500萬元，持續深耕社區經營與專任委託。",
+      "22歲離鄉到台北歷練約10年，32歲回到基隆扎根，成立自己的房仲事業，將台北直營服務經驗帶回家鄉。"
+    ],
+    "promises": [
+      "無距離的服務",
+      "全省委託",
+      "24小時不關機"
+    ],
+    "family": {
+      "src": "assets/about/family.jpg",
+      "alt": "展麟與三個女兒",
+      "caption": "三個女兒的爸"
+    },
+    "lifestyle": {
+      "src": "assets/about/storefront-2026.jpg",
+      "alt": "2026 微笑台北店門口，三個女兒與年度海報合影",
+      "caption": "2026・微笑台北店門口"
+    }
+  }
+}
